@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import MaterialCard from "@/components/MaterialCard";
 import InventoryTest from "@/components/InventoryTest";
+import NavBar from "@/components/NavBar"
 
 export default function Home() {
   const [ingredients, setIngredients] = useState([]);
@@ -56,6 +57,7 @@ export default function Home() {
 
   return (
     <>
+    <NavBar/>
       <InventoryTest inventory={inventory} />
       <div className="flex flex-wrap justify-center">
         {ingredients &&
